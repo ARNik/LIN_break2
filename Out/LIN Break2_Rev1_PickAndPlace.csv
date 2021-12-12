@@ -1,0 +1,34 @@
+Altium Designer Pick and Place Locations
+D:\Mega-F\_LIN_break2\Out\LIN Break2_Rev1_PickAndPlace.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       12.12.21
+Time:       05:00
+Revision:   9e95e12155e076e046c5f9da8c2c3c621e1d43bf
+Variant:    No variations
+Units used: mm
+
+"Designator","Footprint","Center-X(mm)","Center-Y(mm)","Layer","Rotation"
+"DD1","ST-LQFP48","15.0000","15.0000","TopLayer","270"
+"X1","PLS-3","15.0000","5.0000","TopLayer","0"
+"R4","R0603","25.0000","33.0000","TopLayer","0"
+"R3","R1206","25.0000","38.5250","TopLayer","90"
+"R2","R0603","21.0000","28.0000","TopLayer","90"
+"DA3","TI-SOIC8_D","25.0000","27.9750","TopLayer","90"
+"C8","C0603","23.0000","37.6750","TopLayer","90"
+"C7","C0603","7.0051","37.6500","TopLayer","90"
+"DA1","AMS1117-3.3","15.0000","28.0000","TopLayer","270"
+"R6","R0603","4.9694","33.0000","TopLayer","0"
+"R5","R0603","9.0000","28.0000","TopLayer","90"
+"R7","R1206","5.0051","38.5000","TopLayer","90"
+"DA2","TI-SOIC8_D","4.9694","27.9750","TopLayer","90"
+"C6","C0603","8.4000","12.4272","TopLayer","90"
+"C5","C0603","19.1800","9.4651","TopLayer","270"
+"C2","C0603","14.0164","22.0000","TopLayer","0"
+"C4","C0805","15.0116","35.0000","TopLayer","90"
+"C3","C0805","12.5750","35.0000","TopLayer","90"
+"C1","C0603","20.2054","19.5692","TopLayer","0"
+"R1","R0603","5.0051","14.0519","TopLayer","270"
+"VD1","LTST-C193_RED","5.0051","10.0519","TopLayer","90"
