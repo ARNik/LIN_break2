@@ -26,5 +26,3 @@ The circuit schematics of this project are made available under the
 
 Data sheets, Altium libraries, 3D Models are subject to vendor specific
 licensing.
-
-C140290
