@@ -1,7 +1,6 @@
 # LIN break
 
 <img src="images/1.png" width="300" >
-<img src="images/2.png" width="300" >
 
 This device allows you to analyze and reverse engineer LIN bus. 
 It transmits LIN packets to two different outputs depending from packet source.
