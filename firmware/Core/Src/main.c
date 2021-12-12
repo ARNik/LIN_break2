@@ -115,9 +115,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-
-
 	  if(state == Idle)
 	  {
 		  if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(LIN_RXD1_GPIO_Port, LIN_RXD1_Pin))
@@ -136,7 +133,6 @@ int main(void)
 			  HAL_GPIO_WritePin(OUT_R_GPIO_Port, OUT_R_Pin, GPIO_PIN_RESET);
 			  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
 		  }
-
 	  }
 
 	  if(state == L_active)
@@ -164,6 +160,9 @@ int main(void)
 			  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 		  }
 	  }
+
+
+    /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
