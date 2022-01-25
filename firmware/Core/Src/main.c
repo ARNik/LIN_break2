@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
+//#include <stdio.h>
 #include "SEGGER_RTT.h"
 // https://mcuoneclipse.com/2021/10/03/visual-studio-code-for-c-c-with-arm-cortex-m-part-9-rtt/
 
@@ -123,7 +123,27 @@ int main(void)
 
   state = Idle;
 
-  //printf("App Start!\n");
+  SEGGER_RTT_Init();
+  SEGGER_RTT_printf(0, RTT_CTRL_RESET);
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_RED"RTT_CTRL_TEXT_RED"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_GREEN"RTT_CTRL_TEXT_GREEN"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_YELLOW"RTT_CTRL_TEXT_YELLOW"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BLUE"RTT_CTRL_TEXT_BLUE"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_MAGENTA"RTT_CTRL_TEXT_MAGENTA"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_CYAN"RTT_CTRL_TEXT_CYAN"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_WHITE"RTT_CTRL_TEXT_WHITE"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_BLACK"RTT_CTRL_TEXT_BRIGHT_BLACK"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_RED"RTT_CTRL_TEXT_BRIGHT_RED"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_GREEN"RTT_CTRL_TEXT_BRIGHT_GREEN"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_YELLOW"RTT_CTRL_TEXT_BRIGHT_YELLOW"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_BLUE"RTT_CTRL_TEXT_BRIGHT_BLUE"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_MAGENTA"RTT_CTRL_TEXT_BRIGHT_MAGENTA"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_CYAN"RTT_CTRL_TEXT_BRIGHT_CYAN"RTT_CTRL_RESET"\n");
+  SEGGER_RTT_printf(0, RTT_CTRL_TEXT_BRIGHT_WHITE"RTT_CTRL_TEXT_BRIGHT_WHITE"RTT_CTRL_RESET"\n");
+
+
+
+  printf("App Start!\n");
 
   /* USER CODE END 2 */
 
@@ -131,7 +151,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    //SEGGER_RTT_WriteString(0, "Hello World from SEGGER!\r\n");
+    SEGGER_RTT_WriteString(0, "Hello World from SEGGER!\r\n");
     printf("Hello World from SEGGER!\r\n");
 	  if(state == Idle)
 	  {
