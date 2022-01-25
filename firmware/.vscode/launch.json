@@ -15,18 +15,35 @@
       "device": "STM32F103C6",
       "interface": "swd",
       "serialNumber": "",
-      //"preLaunchTask": "cargo build",
       "runToEntryPoint": "main",
-      "svdFile": "${workspaceRoot}/STM32F103xx.svd",
+      "svdFile": "${workspaceRoot}/.vscode/STM32F103xx.svd",
       "swoConfig": {
         "enabled": true,
         "cpuFrequency": 8000000,
         "swoFrequency": 2000000,
         "source": "probe",
         "decoders": [
-            { "type": "console", "label": "ITM", "port": 0 }
+          {
+            "type": "console",
+            "label": "ITM",
+            "port": 0
+          }
         ]
       }
+    },
+    {
+      "showDevDebugOutput": true,
+      "cwd": "${workspaceRoot}",
+      "executable": "./build/STM32F103C6.elf",
+      "name": "Debug STM32",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "preLaunchTask": "Build STM",
+      "device": "stlink",
+      "configFiles": [
+        "openocd.cfg"
+      ]
     }
   ]
 }

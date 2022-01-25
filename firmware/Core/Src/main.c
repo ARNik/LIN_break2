@@ -22,6 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
@@ -54,7 +55,13 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+int _write(int file, char *ptr, int len)
+{
+  int i=0;
+  for(i=0;i<len;i++)
+    ITM_SendChar(*ptr++);
+  return len;
+}
 /* USER CODE END 0 */
 
 /**
@@ -109,6 +116,8 @@ int main(void)
 
   state = Idle;
 
+  printf("App Start!\n");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -119,6 +128,7 @@ int main(void)
 	  {
 		  if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(LIN_RXD1_GPIO_Port, LIN_RXD1_Pin))
 		  {
+        printf("L_active\n");
 			  state = L_active;
 			  HAL_GPIO_WritePin(LIN_TXT1_GPIO_Port, LIN_TXT1_Pin, GPIO_PIN_SET);
 			  HAL_GPIO_WritePin(LIN_TXD2_GPIO_Port, LIN_TXD2_Pin, GPIO_PIN_RESET);
@@ -127,6 +137,7 @@ int main(void)
 		  }
 		  else if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(LIN_RXD2_GPIO_Port, LIN_RXD2_Pin))
 		  {
+        printf("R_active\n");
 			  state = R_active;
 			  HAL_GPIO_WritePin(LIN_TXT1_GPIO_Port, LIN_TXT1_Pin, GPIO_PIN_RESET);
 			  HAL_GPIO_WritePin(LIN_TXD2_GPIO_Port, LIN_TXD2_Pin, GPIO_PIN_SET);
@@ -139,6 +150,7 @@ int main(void)
 	  {
 		  if(GPIO_PIN_SET == HAL_GPIO_ReadPin(LIN_RXD1_GPIO_Port, LIN_RXD1_Pin))
 		  {
+        printf("Idle\n");
 			  state = Idle;
 			  HAL_GPIO_WritePin(LIN_TXT1_GPIO_Port, LIN_TXT1_Pin, GPIO_PIN_SET);
 			  HAL_GPIO_WritePin(LIN_TXD2_GPIO_Port, LIN_TXD2_Pin, GPIO_PIN_SET);
@@ -152,6 +164,7 @@ int main(void)
 	  {
 		  if(GPIO_PIN_SET == HAL_GPIO_ReadPin(LIN_RXD2_GPIO_Port, LIN_RXD2_Pin))
 		  {
+        printf("Idle\n");
 			  state = Idle;
 			  HAL_GPIO_WritePin(LIN_TXT1_GPIO_Port, LIN_TXT1_Pin, GPIO_PIN_SET);
 			  HAL_GPIO_WritePin(LIN_TXD2_GPIO_Port, LIN_TXD2_Pin, GPIO_PIN_SET);
