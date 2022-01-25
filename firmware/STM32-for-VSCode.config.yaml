@@ -72,6 +72,7 @@ includeDirectories:
   - Src/**
   - Core/Src/**
   - Core/Lib/**
+  - RTT/**
 
 
 # Files that should be included in the compilation.
@@ -83,6 +84,7 @@ sourceFiles:
   - Src/**
   - Core/Src/**
   - Core/Lib/**
+  - RTT/**
 
 
 # When no makefile is present it will show a warning pop-up.

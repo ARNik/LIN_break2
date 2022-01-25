@@ -52,7 +52,10 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
+RTT/SEGGER_RTT.c \
+RTT/SEGGER_RTT_Syscalls_GCC.c \
+RTT/SEGGER_RTT_printf.c
 
 
 CPP_SOURCES = \
@@ -122,7 +125,8 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
--IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy
+-IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy \
+-IRTT
 
 
 
