@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-//#include <stdio.h>
+#include <stdio.h>
 #include "SEGGER_RTT.h"
 // https://mcuoneclipse.com/2021/10/03/visual-studio-code-for-c-c-with-arm-cortex-m-part-9-rtt/
 
@@ -131,7 +131,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    SEGGER_RTT_WriteString(0, "Hello World from SEGGER!\r\n");
+    //SEGGER_RTT_WriteString(0, "Hello World from SEGGER!\r\n");
+    printf("Hello World from SEGGER!\r\n");
 	  if(state == Idle)
 	  {
 		  if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(LIN_RXD1_GPIO_Port, LIN_RXD1_Pin))
