@@ -4,6 +4,8 @@
     "cortex-debug.openocdPath": "C:\\USERS\\USER\\APPDATA\\ROAMING\\CODE\\USER\\GLOBALSTORAGE\\BMD.STM32-FOR-VSCODE\\@XPACK-DEV-TOOLS\\OPENOCD\\0.11.0-2.1\\.CONTENT\\BIN\\OPENOCD.EXE",
     "files.associations": {
         "*.make": "makefile",
-        "segger_rtt.h": "c"
+        "segger_rtt.h": "c",
+        "segger_rtt_conf.h": "c",
+        "main.h": "c"
     },
 }
